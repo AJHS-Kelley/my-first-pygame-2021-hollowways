@@ -28,7 +28,7 @@ textReact.centerx = windowSurface.get_rect().centerx
 textReact.centery = windowSurface.get_rect().centery
 
 
-windowSurface.fill(BLUE)
+windowSurface.fill(RED)
 
 # Draw a polygon on the screen.
 pygame.draw.polygon(windowSurface, BLUE, ((150,0), (284,103), (218,252, (64,252)(0,103)))
@@ -48,21 +48,22 @@ pygame.draw.ellipse(windowSurface, RED, (450, 150),2)
 pygame.draw.rect(windowSurface, PURPLE, (textRect.left - 20, textRect.top - 20, textRect + 40, textRect.height +40))
 
 # Create Pixal Array
-pixArray = pyagme.pixelArray(windowSurface)
+pixArray = pyagme.PixelArray(windowSurface)
 pixelArray[480][380] = CYAN
 del pixArray
 
 # DRAW the text onto the surface.
 windowSurface.blit(text, textRect)
 
+# Update Pygame Display
+pygame.display.update()
 
-
-
-
-
-
-
-
+# Run game loop.
+while True:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
 
 
 
