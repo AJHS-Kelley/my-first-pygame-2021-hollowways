@@ -11,35 +11,35 @@ windowSurface = pygame.display.set_mode((500, 400), 0, 32)
 pygame.display.set_caption('Hello, world!')
 
 # Setup Colors
-BLUE = (204, 100%, 50%)
-CYAN = (180, 100%, 70%)
-RED = (0, 100%, 50%)
-YELLOW = (60, 100%, 50%)
-PURPLE = (270, 100%, 55%)
+BLUE = (204, 100, 50)
+CYAN = (180, 100, 70)
+RED = (0, 100, 50)
+YELLOW = (60, 100, 50)
+PURPLE = (270, 100, 55)
+PUKEGREEN = (17, 115, 63)
 
 # Setup font
 basicFont = pygame.font.Sysfont(None, 48)
 
+
 # Setup text.
-text = basicFont.render('Hello, world! True, PURPLE, YELLOW)
+text = basicFont.render('Hello, world!', True, PURPLE, YELLOW)
 textRect = text.get_rect()
 textRect.conterx = windowSurface.get_rect().centerx
-textReact.centerx = windowSurface.get_rect().centerx
-textReact.centery = windowSurface.get_rect().centery
-
+textRect.centerx = windowSurface.get_rect().centerx
 
 windowSurface.fill(CYAN)
 
 # Draw a polygon on the screen.
-pygame.draw.polygon(windowSurface, BLUE, ((150,0), (284,103), (218,252, (64,252)(0,103)))
+pygame.draw.polygon (windowSurface, BLUE, ((150,0), (284,103), (218,252, (64,252)(0,103)))
 
 
 pygame.draw.line(windowSurface, RED, (60,60), (120, 60), 5)
-pygame.draw.line(windowSurface, CYAN, (80, 95), (95, 80), 3)
+pygame.draw.line(windowSurface, PUKEGREEN, (75, 60), (60, 75), 2)
 pygame.draw.line(windowSurface, PURPLE, (0, 160), (160, 0), 2)
 
 # Draw a circle.
-pygame.draw.circle(windowSurface, YELLOW, (450, 100), 35, 0)
+pygame.draw.circle(windowSurface, PUKEGREEN, (450, 100), 35, 0)
 
 # Draw an ellipse.
 pygame.draw.ellipse(windowSurface, RED, (450, 150),2)
