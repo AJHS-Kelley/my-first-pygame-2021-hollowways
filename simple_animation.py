@@ -1,4 +1,4 @@
-# Simple Animation with Pygame, Ja' Mauri Williams, 1/07/22, 2:09PM, v0.4
+# Simple Animation with Pygame, Ja' Mauri Williams, 1/07/22, 2:18PM, v0.5
 
 import pygame, sys, time
 from pygame.locals import
@@ -32,3 +32,11 @@ b1 = {'rect':pyagme.Rect(300, 80, 50, 100), 'color':RED, 'dir' UPRIGHT}
 b2 = {'rect':pyagme.Rect(200, 200, 20, 20), 'color':GREEN, 'dir' UPLEFT}
 b3 = {'rect':pyagme.Rect(100, 150, 60, 60), 'color':BLUE, 'dir' DOWNLEFT}
 boxes = [b1, b2, b3]
+
+# Run the game loop.
+while True: 
+    # Check for QUIT event.
+    for event in pyagme.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
