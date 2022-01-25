@@ -1,4 +1,4 @@
-# Simple Animation with Pygame, Ja' Mauri Williams, 1/25/22, 2:11PM, v0.7
+# Simple Animation with Pygame, Ja' Mauri Williams, 1/25/22, 2:18PM, v0.8
 
 import pygame, sys, time
 from pygame.locals import
@@ -82,4 +82,9 @@ while True:
                      b['dir'] = DOWNLEFT
                 if b['dir'] == UPRIGHT:
                     b['dir'] = UPLEFT
+        
+        # Draw the window to the screen.
+        pygame.display.update()
+        time.sleep(0.02)
+    
 
